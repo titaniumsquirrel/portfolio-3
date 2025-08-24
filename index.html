@@ -7,38 +7,126 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Wind Tunnel Project Portfolio</h1>
     <p>Mechanical Engineering – Lancaster University</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <button onclick="showSection('overview')">Overview</button>
     <button onclick="showSection('method')">Method</button>
     <button onclick="showSection('results')">Results</button>
-    <button onclick="showSection('gallery')">Gallery</button>
+    <button onclick="showSection('gallery')">Project</button>
   </nav>
 
+  <!-- Main Content -->
   <main>
+    <!-- Overview -->
     <section id="overview" class="active">
       <h2>Project Overview</h2>
-      <p>This portfolio documents the design and development of a small-scale wind tunnel for aerodynamic testing.</p>
+      <p>
+        This portfolio documents the design, construction, and testing of a small-scale wind tunnel for aerodynamic experiments.
+      </p>
     </section>
 
+    <!-- Method -->
     <section id="method">
       <h2>Methodology</h2>
-      <p>The wind tunnel was designed with CAD, constructed from sheet materials, and powered using an axial fan.</p>
+      <p>
+        The wind tunnel was designed using CAD, fabricated from plywood and sheet metal, and instrumented with a strain gauge. Testing involved airflow measurements and lift analysis for a model airfoil.
+      </p>
     </section>
 
+    <!-- Results -->
     <section id="results">
       <h2>Results & Analysis</h2>
-      <p>Key results from aerodynamic testing will be presented here (graphs, efficiency calculations, performance data).</p>
+      <p>
+        Key results include velocity uniformity in the test section, calibration data, and lift measurements across different angles of attack. Graphs and plots can be added later.
+      </p>
     </section>
 
+    <!-- Project Build Log -->
     <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="placeholder">Image Placeholder</div>
-      <div class="placeholder">Image Placeholder</div>
+      <h2>Wind Tunnel Project — Step by Step</h2>
+      <p class="muted">
+        A curated build log showing the main decisions, fabrication stages, and testing steps.
+      </p>
+
+      <div class="build-log">
+        <details open>
+          <summary>1) Research & Planning</summary>
+          <p>Conducted initial research on tunnel design requirements, materials, and costs. Performed Reynolds number calculations to ensure laminar flow conditions.</p>
+          <div class="step-media">
+            <a href="images/research.webp" target="_blank">
+              <img src="images/research.webp" alt="Notes and calculations for Reynolds number and tunnel sizing" />
+            </a>
+          </div>
+        </details>
+
+        <details>
+          <summary>2) CAD Design</summary>
+          <p>Designed the contraction, test section, and diffuser in SolidWorks. Created dimensioned drawings to guide fabrication.</p>
+          <div class="step-media">
+            <a href="images/cad-model.webp" target="_blank">
+              <img src="images/cad-model.webp" alt="SolidWorks CAD render of the wind tunnel" />
+            </a>
+            <a href="images/drawing.webp" target="_blank">
+              <img src="images/drawing.webp" alt="Dimensioned drawing of wind tunnel components" />
+            </a>
+          </div>
+        </details>
+
+        <details>
+          <summary>3) Fabrication</summary>
+          <p>Cut plywood panels with a circular saw, joined using adhesive and nails, and added a professionally cut glass viewing panel. Constructed flow straighteners with straws and spray adhesive.</p>
+          <div class="step-media">
+            <a href="images/fabrication1.webp" target="_blank">
+              <img src="images/fabrication1.webp" alt="Cutting and assembling plywood structure" />
+            </a>
+            <a href="images/glass-panel.webp" target="_blank">
+              <img src="images/glass-panel.webp" alt="Installed glass viewing panel" />
+            </a>
+          </div>
+        </details>
+
+        <details>
+          <summary>4) Instrumentation & Strain Gauge Setup</summary>
+          <p>Soldered a single-point load cell strain gauge to an HX711 amplifier. Machined aluminium sheet brackets and bolted them with M5×0.5 and M6×0.5 fasteners. Mounted a wooden block with a pencil as a lever arm for lift measurement.</p>
+          <div class="step-media">
+            <a href="images/strain-gauge.webp" target="_blank">
+              <img src="images/strain-gauge.webp" alt="Strain gauge soldered to HX711 amplifier" />
+            </a>
+            <a href="images/aluminium-mount.webp" target="_blank">
+              <img src="images/aluminium-mount.webp" alt="Aluminium bracket attached with bolts" />
+            </a>
+          </div>
+        </details>
+
+        <details>
+          <summary>5) Arduino Coding & Calibration</summary>
+          <p>Programmed the Arduino IDE to display lift readings. Calibrated the load cell for accurate measurements.</p>
+          <div class="step-media">
+            <a href="images/arduino-code.webp" target="_blank">
+              <img src="images/arduino-code.webp" alt="Arduino IDE with strain gauge calibration code" />
+            </a>
+          </div>
+        </details>
+
+        <details>
+          <summary>6) Testing & Data Collection</summary>
+          <p>Drilled a mounting point for the pencil, attached a cardboard airfoil with masking tape, measured lift at varying angles of attack, and analysed the data with the fan running.</p>
+          <div class="step-media">
+            <a href="images/airfoil-test.webp" target="_blank">
+              <img src="images/airfoil-test.webp" alt="Cardboard airfoil mounted in wind tunnel" />
+            </a>
+            <a href="images/results.webp" target="_blank">
+              <img src="images/results.webp" alt="Recorded lift data across different angles of attack" />
+            </a>
+          </div>
+        </details>
+      </div>
     </section>
   </main>
 
