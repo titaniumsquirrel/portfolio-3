@@ -3,133 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wind Tunnel Project Portfolio</title>
+  <title>Wind Tunnel Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1>Wind Tunnel Project Portfolio</h1>
+    <h1>Wind Tunnel for Airfoil Lift Measurements</h1>
     <p>Mechanical Engineering – Lancaster University</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
-    <button onclick="showSection('overview')">Overview</button>
-    <button onclick="showSection('method')">Method</button>
-    <button onclick="showSection('results')">Results</button>
-    <button onclick="showSection('gallery')">Project</button>
+    <button class="active" onclick="showSection('overview', this)">Overview</button>
+    <button onclick="showSection('gallery', this)">Gallery</button>
+    <button onclick="showSection('details', this)">Step-by-Step</button>
   </nav>
 
-  <!-- Main Content -->
   <main>
     <!-- Overview -->
     <section id="overview" class="active">
-      <h2>Project Overview</h2>
+      <h2>Project Summary</h2>
       <p>
-        This portfolio documents the design, construction, and testing of a small-scale wind tunnel for aerodynamic experiments.
+        Designed and built a small-scale wind tunnel to measure lift forces on model airfoils. Demonstrates CAD, fabrication, electronics, and testing skills.
       </p>
+      <h3>Motivation & Context</h3>
+      <p>
+        Objective: create a functional, lab-scale tunnel producing laminar flow for airfoil testing, within budget and using accessible materials.
+      </p>
+      <h3>My Role & Contribution</h3>
+      <ul>
+        <li>CAD design & dimensioned drawings in SolidWorks</li>
+        <li>Plywood & sheet metal fabrication</li>
+        <li>Soldered strain gauge to HX711 amplifier</li>
+        <li>Arduino programming & calibration</li>
+        <li>Testing & lift data collection</li>
+      </ul>
+      <h3>Skills Demonstrated</h3>
+      <ul>
+        <li>CAD & 3D modelling</li>
+        <li>Fabrication & assembly</li>
+        <li>Electronics & sensors</li>
+        <li>Arduino programming</li>
+        <li>Data collection & analysis</li>
+      </ul>
     </section>
 
-    <!-- Method -->
-    <section id="method">
-      <h2>Methodology</h2>
-      <p>
-        The wind tunnel was designed using CAD, fabricated from plywood and sheet metal, and instrumented with a strain gauge. Testing involved airflow measurements and lift analysis for a model airfoil.
-      </p>
-    </section>
-
-    <!-- Results -->
-    <section id="results">
-      <h2>Results & Analysis</h2>
-      <p>
-        Key results include velocity uniformity in the test section, calibration data, and lift measurements across different angles of attack. Graphs and plots can be added later.
-      </p>
-    </section>
-
-    <!-- Project Build Log -->
+    <!-- Gallery -->
     <section id="gallery">
-      <h2>Wind Tunnel Project — Step by Step</h2>
-      <p class="muted">
-        A curated build log showing the main decisions, fabrication stages, and testing steps.
-      </p>
+      <h2>Project Gallery</h2>
+      <div class="hero">
+        <img src="images/hero.webp" alt="Assembled wind tunnel" />
+      </div>
 
+      <h3>CAD & Drawings</h3>
+      <div class="step-media">
+        <img src="images/cad-model.webp" alt="CAD model of wind tunnel" />
+        <img src="images/drawing.webp" alt="Dimensioned drawing" />
+      </div>
+
+      <h3>Fabrication</h3>
+      <div class="step-media">
+        <img src="images/fabrication1.webp" alt="Plywood panels assembled" />
+        <img src="images/glass-panel.webp" alt="Glass viewing panel installed" />
+      </div>
+
+      <h3>Instrumentation</h3>
+      <div class="step-media">
+        <img src="images/strain-gauge.webp" alt="Strain gauge & HX711 amplifier" />
+        <img src="images/arduino-code.webp" alt="Arduino IDE showing lift data" />
+      </div>
+
+      <h3>Testing & Results</h3>
+      <div class="step-media">
+        <img src="images/airfoil-test.webp" alt="Airfoil testing in wind tunnel" />
+        <img src="images/results.webp" alt="Lift measurement results" />
+      </div>
+    </section>
+
+    <!-- Step-by-Step -->
+    <section id="details">
+      <h2>Step-by-Step Build Log</h2>
+      <p>Click each section to expand full project details.</p>
       <div class="build-log">
         <details open>
           <summary>1) Research & Planning</summary>
-          <p>Conducted initial research on tunnel design requirements, materials, and costs. Performed Reynolds number calculations to ensure laminar flow conditions.</p>
-          <div class="step-media">
-            <a href="images/research.webp" target="_blank">
-              <img src="images/research.webp" alt="Notes and calculations for Reynolds number and tunnel sizing" />
-            </a>
-          </div>
+          <p>Researched designs, materials, costs, and calculated Reynolds number for laminar flow.</p>
         </details>
 
         <details>
-          <summary>2) CAD Design</summary>
-          <p>Designed the contraction, test section, and diffuser in SolidWorks. Created dimensioned drawings to guide fabrication.</p>
-          <div class="step-media">
-            <a href="images/cad-model.webp" target="_blank">
-              <img src="images/cad-model.webp" alt="SolidWorks CAD render of the wind tunnel" />
-            </a>
-            <a href="images/drawing.webp" target="_blank">
-              <img src="images/drawing.webp" alt="Dimensioned drawing of wind tunnel components" />
-            </a>
-          </div>
+          <summary>2) Material Selection & Costing</summary>
+          <p>Selected plywood, sheet metal, straws, adhesives, and glass for budget and accessibility.</p>
         </details>
 
         <details>
-          <summary>3) Fabrication</summary>
-          <p>Cut plywood panels with a circular saw, joined using adhesive and nails, and added a professionally cut glass viewing panel. Constructed flow straighteners with straws and spray adhesive.</p>
-          <div class="step-media">
-            <a href="images/fabrication1.webp" target="_blank">
-              <img src="images/fabrication1.webp" alt="Cutting and assembling plywood structure" />
-            </a>
-            <a href="images/glass-panel.webp" target="_blank">
-              <img src="images/glass-panel.webp" alt="Installed glass viewing panel" />
-            </a>
-          </div>
+          <summary>3) CAD Design & Drawings</summary>
+          <p>Designed in SolidWorks and created dimensioned drawings for fabrication.</p>
         </details>
 
         <details>
-          <summary>4) Instrumentation & Strain Gauge Setup</summary>
-          <p>Soldered a single-point load cell strain gauge to an HX711 amplifier. Machined aluminium sheet brackets and bolted them with M5×0.5 and M6×0.5 fasteners. Mounted a wooden block with a pencil as a lever arm for lift measurement.</p>
-          <div class="step-media">
-            <a href="images/strain-gauge.webp" target="_blank">
-              <img src="images/strain-gauge.webp" alt="Strain gauge soldered to HX711 amplifier" />
-            </a>
-            <a href="images/aluminium-mount.webp" target="_blank">
-              <img src="images/aluminium-mount.webp" alt="Aluminium bracket attached with bolts" />
-            </a>
-          </div>
+          <summary>4) Cutting & Assembly</summary>
+          <p>Cut plywood, joined with adhesive and nails, installed glass viewing panel, and added straw flow straighteners.</p>
         </details>
 
         <details>
-          <summary>5) Arduino Coding & Calibration</summary>
-          <p>Programmed the Arduino IDE to display lift readings. Calibrated the load cell for accurate measurements.</p>
-          <div class="step-media">
-            <a href="images/arduino-code.webp" target="_blank">
-              <img src="images/arduino-code.webp" alt="Arduino IDE with strain gauge calibration code" />
-            </a>
-          </div>
+          <summary>5) Strain Gauge & Electronics</summary>
+          <p>Soldered strain gauge to HX711 amplifier, fabricated brackets, mounted pencil lever arm.</p>
         </details>
 
         <details>
-          <summary>6) Testing & Data Collection</summary>
-          <p>Drilled a mounting point for the pencil, attached a cardboard airfoil with masking tape, measured lift at varying angles of attack, and analysed the data with the fan running.</p>
-          <div class="step-media">
-            <a href="images/airfoil-test.webp" target="_blank">
-              <img src="images/airfoil-test.webp" alt="Cardboard airfoil mounted in wind tunnel" />
-            </a>
-            <a href="images/results.webp" target="_blank">
-              <img src="images/results.webp" alt="Recorded lift data across different angles of attack" />
-            </a>
-          </div>
+          <summary>6) Arduino Coding & Calibration</summary>
+          <p>Programmed Arduino to display lift data and calibrated the system.</p>
+        </details>
+
+        <details>
+          <summary>7) Test Setup</summary>
+          <p>Mounted airfoil on pencil lever, measured angles of attack, prepared fan airflow.</p>
+        </details>
+
+        <details>
+          <summary>8) Testing & Data Collection</summary>
+          <p>Ran fan, recorded lift at various angles via Arduino serial monitor.</p>
         </details>
       </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    function showSection(id, btn) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
 </body>
 </html>
