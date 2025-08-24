@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leo Pugh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wind Tunnel Project Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Leo Pugh</h1>
-        <p>Mechanical Engineering Student | Aspiring Trader | Future Innovator</p>
-    </header>
+  <header>
+    <h1>Wind Tunnel Project Portfolio</h1>
+    <p>Mechanical Engineering – Lancaster University</p>
+  </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav>
+    <button onclick="showSection('overview')">Overview</button>
+    <button onclick="showSection('method')">Method</button>
+    <button onclick="showSection('results')">Results</button>
+    <button onclick="showSection('gallery')">Gallery</button>
+  </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I’m a Mechanical Engineering student at Lancaster University with interests in engineering design, 
-            day trading, and innovative technologies. I’m working towards building strong technical skills and 
-            financial knowledge to succeed in the long run.
-        </p>
+  <main>
+    <section id="overview" class="active">
+      <h2>Project Overview</h2>
+      <p>This portfolio documents the design and development of a small-scale wind tunnel for aerodynamic testing.</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Flexible Strain Sensor Circuit</h3>
-            <p>Designed a signal conditioning circuit with a Wheatstone bridge and AD620 amplifier for precise strain measurements.</p>
-        </div>
-        <div class="project">
-            <h3>DIY Wind Tunnel</h3>
-            <p>Built and tested a home-made wind tunnel for aerodynamic experiments and data collection.</p>
-        </div>
+    <section id="method">
+      <h2>Methodology</h2>
+      <p>The wind tunnel was designed with CAD, constructed from sheet materials, and powered using an axial fan.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <section id="results">
+      <h2>Results & Analysis</h2>
+      <p>Key results from aerodynamic testing will be presented here (graphs, efficiency calculations, performance data).</p>
     </section>
 
-    <footer>
-        <p>© 2025 Leo Pugh</p>
-    </footer>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="placeholder">Image Placeholder</div>
+      <div class="placeholder">Image Placeholder</div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
